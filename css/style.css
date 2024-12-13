@@ -1,0 +1,455 @@
+body{
+    color: #333;
+    background-color: #d3dae0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.cabeçalho-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Alinha verticalmente os elementos */
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.23); /* Sombra suave */
+}
+
+.menu-icon {
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1001;
+}
+.menu-icon:hover {
+    color: #4acbe2; /* Cor do ícone ao passar o mouse */
+    transform: translateY(-2px);
+}
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Esconde o menu fora da tela */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding-top: 60px; /* Espaço para o menu começar abaixo do cabeçalho */
+    transition: left 0.3s ease; /* Transição suave para o menu */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Garante que o menu fique abaixo do ícone */
+}
+
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-lateral li {
+    margin-bottom: 15px;
+}
+
+.menu-lateral a {
+    background-color: #555;
+    margin: 15px;
+    border-radius: 7px;
+    border: 1.5px solid #4acbe2;
+    text-decoration: none;
+    color: #4acbe2;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra suave */
+}
+
+.menu-lateral a:hover {
+    background-color: #4acbe2;
+    color: #333;
+}
+
+/* Classe para mostrar o menu */
+.menu-lateral.open {
+    left: 0; /* Traz o menu para a tela */
+}
+
+/* Ajusta a posição do ícone quando o menu está aberto */
+.menu-icon.open {
+    position: fixed;
+    left: 260px; /* Ajuste para a posição desejada ao lado do menu */
+    color: #4acbe2; /* Cor diferente para indicar que o menu está aberto */
+}
+/* Estilo para os ícones de redes sociais */
+.redes-sociais {
+    display: flex;
+    gap: 20px; /* Espaçamento maior entre os ícones */
+    margin: 0px 40px;
+}
+
+/* Estilo para os links dos ícones, com fundo, espaçamento, e efeito de botão */
+.redes-sociais a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color: #555; /* Cor de fundo dos botões */
+    border-radius: 50%; /* Torna os ícones circulares */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.redes-sociais a:hover {
+    background-color: #4acbe2; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do ícone ao passar o mouse */
+    transform: translateY(-2px);
+}
+main{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20pxpx;
+}
+section{
+    border-radius: 5px;
+}
+
+
+#inicio{
+    text-align: center;
+}
+.welcome{
+    padding-top: 50px;
+    font-size: 40px;
+}
+.minha-foto{
+    width: 180px;
+    height: auto;
+    border-radius: 50%;
+    border: 2.5px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.ros{
+font-size: 30px;
+}
+#sobre {
+    width: 80%;
+    margin: 0 auto;
+    background-color: aliceblue; /* Mantendo a cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin-top: 50px;
+    border: 1px solid #ccc; /* Suaviza a borda */
+    text-align: center;
+}
+
+.titulo-sobre {
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #4acbe2; /* Linha decorativa abaixo do título */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.sobre-mim {
+    font-size: 18px;
+    padding: 0px 30px; /* Reduz um pouco o padding lateral para melhorar a leitura */
+    line-height: 1.6; /* Melhora o espaçamento entre as linhas do texto */
+    color: #555; /* Cor mais suave para o texto */
+    text-align: justify; /* Deixa o texto alinhado dos dois lados */
+    margin-bottom: 20px; /* Espaço entre o texto e o álbum de fotos */
+}
+
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    gap: 20px; /* Espaço entre as imagens */
+    margin-top: 10px;
+}
+
+.album img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Suaviza a sombra */
+    transition: transform 0.3s ease; /* Adiciona transição suave ao hover */
+}
+
+.album img:hover {
+    transform: scale(1.05); /* Aumenta levemente a imagem ao passar o mouse */
+}
+
+#habilidades {
+    width: 80%;
+    margin: 0 auto;
+    background-color: aliceblue; /* Fundo base da seção */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin-top: 50px;
+    border: 1px solid #ccc; /* Borda mais suave para complementar o aliceblue */
+    text-align: center;
+}
+
+#habilidades h2 {
+    
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    border-bottom: 2px solid #4acbe2; /* Linha azul clara abaixo do título */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.lista-habilidades {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding: 0;
+    margin: 0;
+}
+
+.lista-habilidades li {
+    background-color: #f0f8ff; /* Fundo mais claro que aliceblue para cada item */
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+    display: flex;
+    align-items: center;
+}
+
+.lista-habilidades li:hover {
+    background-color: #4acbe2; /* Um azul suave no hover para criar contraste */
+}
+
+#projetos {
+    width: 80%;
+    margin: 0 auto;
+    background-color: aliceblue; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin-top: 50px;
+    border: 1px solid #ccc; /* Suaviza a borda */
+    text-align: center;
+}
+
+.titulo-projetos {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #4acbe2; /* Linha decorativa abaixo do título */
+    display: inline-block;
+    padding-bottom: 5px;
+    
+}
+
+.texto-projetos {
+    font-size: 18px;
+    padding: 0px 30px;
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+    color: #555; /* Cor mais suave para o texto */
+    text-align: justify; /* Deixa o texto alinhado dos dois lados */
+    margin-bottom: 20px; /* Espaço entre o texto e o botão */
+    text-align: center;
+}
+
+.botao-portifolio {
+    display: inline-block;
+    padding: 10px 25px; /* Ajusta o padding para um botão mais confortável */
+    background-color: #333; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave no botão */
+}
+
+.botao-portifolio:hover {
+    background-color: #4acbe2; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Eleva levemente o botão */
+}
+#Certificacoes {
+    width: 80%;
+    margin: 0 auto;
+    background-color: aliceblue; /* Fundo base da seção */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin-top: 50px;
+    border: 1px solid #ccc; /* Borda mais suave para complementar o aliceblue */
+    text-align: center;
+}
+
+#Certificacoes h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    border-bottom: 2px solid #4acbe2; /* Linha azul clara abaixo do título */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.lista-certificacoes {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding: 0;
+    margin: 0;
+}
+
+.lista-certificacoes li {
+    background-color: #f0f8ff; /* Fundo mais claro que aliceblue para cada item */
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+    display: flex;
+    align-items: center;
+}
+
+.lista-certificacoes li:hover {
+    background-color: #4acbe2; /* Um azul suave no hover para criar contraste */
+}
+
+#livros {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    background-color: aliceblue; /* Fundo base da seção */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin-top: 50px;
+    border: 1px solid #ccc; /* Borda mais suave para complementar o aliceblue */
+    margin-bottom: 40px;
+}
+#livros h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    border-bottom: 2px solid #4acbe2; /* Linha azul clara abaixo do título */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.lista-livros {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding: 0;
+    margin: 0;
+}
+
+.lista-livros li {
+    background-color: #f0f8ff; /* Fundo mais claro que aliceblue para cada item */
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+    display: flex;
+    flex-direction: column; /* Permite que o título e a descrição fiquem um abaixo do outro */
+    text-align: left; /* Alinha o texto à esquerda para melhorar a leitura */
+}
+
+.lista-livros li:hover {
+    background-color: #4acbe2; /* Um azul suave no hover para criar contraste */
+}
+
+.titulo-livro {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.descricao-resumo {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.rodape {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    padding: 40px 20px; /* Espaçamento interno */
+    text-align: center;
+    border-top: 2px solid #4acbe2; /* Linha superior decorativa */
+}
+
+.titulo-rodape {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4acbe2; /* Cor azul clara */
+}
+
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #ddd; /* Cor clara para os rótulos */
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #4acbe2;
+}
+
+.btn-enviar {
+    background-color: #4acbe2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #38a9c2;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa; /* Cor mais clara para o texto de direitos autorais */
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="css/style.css" rel="stylesheet">
+<!--! Bibliotecas -->
+<!-- Incluindo a biblioteca de ícones Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link href="img/favicon.png" rel="icon" type="image/png">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Silva</title>
+</head>
+<body>
+    <header class="cabeçalho-fixo"> <!--? Cabeçalho inicio da página-->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> <!-- Ícone do menu (FontAwesome) -->
+        </div>
+        
+        <div class="redes-sociais">
+        <!-- Ícones de redes sociais -->
+            <a href="https://www.instagram.com/rsilva0708" target="_blank">
+            <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/+5564999842587" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/RafaSilva07" target="_blank">
+            <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <aside id="menu-lateral" class="menu-lateral">
+            <nav>
+                <ul>
+                    <li><a href="#inicio" onclick="scrollToSection(event, '#inicio')">Início</a></li>
+                    <li><a href="#sobre" onclick="scrollToSection(event, '#sobre')">Sobre</a></li>
+                    <li><a href="#habilidades" onclick="scrollToSection(event, '#habilidades')">Habilidades</a></li>
+                    <li><a href="#projetos" onclick="scrollToSection(event, '#projetos')">Projetos</a></li>
+                    <li><a href="#Certificacoes" onclick="scrollToSection(event, '#Certificacoes')">Certificações</a></li>
+                    <li><a href="#livros" onclick="scrollToSection(event, '#livros')">Livros que já li</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </header>
+    <main>
+        <section id="inicio">
+            <h1 class="welcome">Bem-Vindo!</h1>
+            <h2 class="ros">Meu nome é, Rafael de Oliveira Silva.</h2>
+            <img src="img/foto3.jpg" alt="Minha foto" class="minha-foto">
+        </section>
+        <section id="sobre">
+            <h2 class="titulo-sobre">Sobre</h2>
+            <p class="sobre-mim"> Eu sou estudante de Sistemas de Informação e estou sempre buscando novas formas 
+                de aprender e crescer, tanto pessoal quanto profissionalmente.
+                No meu dia a dia, gosto de organizar meus estudos, 
+                revisar conteúdos e explorar novos temas como linguagem corporal e aprimorar meu inglês. 
+                Além disso, procuro manter um estilo de vida saudável, praticando exercícios físicos regularmente, 
+                seja jogando futebol, pedalando ou treinando em casa. Nos meus momentos de lazer, 
+                adoro pescar e aproveitar o tempo ao ar livre. Estou sempre em busca de novos 
+                desafios e oportunidades para desenvolver minhas habilidades e conhecimentos.</p>
+            <div class="album">
+                <img src="img/foto01.jpg" alt="foto1">
+                <img src="img/foto02.jpg" alt="foto2">
+                <img src="img/foto03.jpg" alt="foto3">
+            </div>    
+        </section>
+            <section id="habilidades">
+                <h2 class="titulo-habilidades">Habilidades</h2>
+                <ul class="lista-habilidades">
+                    <li>Inglês Intermediário</li>
+                    <li>Pacote Office Intermediário</li>
+                    <li>HTML Básico</li>
+                    <li>CSS Básico</li>
+                </ul>
+            </section>
+            <section id="projetos">
+                <h2 class="titulo-projetos">Projetos</h2>
+                <p class="texto-projetos">
+                    Ficou curioso para conhecer mais sobre meus projetos?
+                <br>
+                    Acesse meu portfólio e descubra algumas das soluções que já desenvolvi, 
+                    desde aplicações web até sistemas complexos. Cada projeto é uma 
+                    oportunidade de mostrar minha dedicação e paixão pela tecnologia. Confira e inspire-se!
+                </p>
+                <a href="https://rafasilva07.github.io/MeuPortifolio/"target="_blank" class="botao-portifolio">Conheça Meu Portfólio</a>
+            </section>
+            <section id="Certificacoes">
+                <h2 class="titulo-certificacoes">Certificações</h2>
+                <ul class="lista-certificacoes">
+                    <li>Curso de Inglês - Escola Jolly Joy</li>
+                    <li>Mini-Curso Pacote Office</li>
+                    <li>Mini-Curso de arduíno - If Maker</li>
+                    <li>Introdução à Java POO na Udemy</li>
+                </ul>
+            </section>
+            <section id="livros">
+                <h2 class="titulo-livros">Livros que Já Li</h2>
+                <ul class="lista-livros">
+                    <li>
+                        <h3 class="titulo-livro">Mais Esperto que o Diabo - Napoleon Hill</h3>
+                        <p class="descricao-resumo">Um diálogo fascinante entre Napoleon Hill e o "Diabo", que revela as barreiras mentais que impedem as pessoas de atingirem seu potencial máximo.</p>
+                    </li>
+                    <li>
+                        <h3 class="titulo-livro">O Poder do Hábito - Charles Duhigg</h3>
+                        <p class="descricao-resumo">Explora como os hábitos se formam e como podemos mudá-los para alcançar nossos objetivos, usando exemplos práticos e pesquisas científicas.</p>
+                    </li>
+                    <li>
+                        <h3 class="titulo-livro">Psi-Q - Ben Ambridge</h3>
+                        <p class="descricao-resumo">Um livro intrigante que explora o funcionamento da mente humana e o que a psicologia nos revela sobre nós mesmos.</p>
+                    </li>
+                    <li>
+                        <h3 class="titulo-livro">Equilíbrio e Resultado - Christian Barbosa</h3>
+                        <p class="descricao-resumo">Um guia prático para alcançar produtividade sem abrir mão do equilíbrio entre vida pessoal e profissional.</p>
+                    </li>
+                    <li>
+                        <h3 class="titulo-livro">Quem Mexeu no Meu Queijo? - Spencer Johnson</h3>
+                        <p class="descricao-resumo">Uma parábola sobre como lidar com mudanças em nossas vidas e ambientes de trabalho.</p>
+                    </li>
+                    <li>
+                        <h3 class="titulo-livro">Olá, Mentor - Kwak Sook-Chul</h3>
+                        <p class="descricao-resumo">Um livro que explora a importância da mentoria e como a relação entre mentor e mentorado pode transformar vidas e carreiras.</p>
+                    </li>
+                </ul>
+            </section>
+            
+        </main>
+        <footer class="rodape" id="contato">
+            <h2 class="titulo-rodape">Entre em Contato</h2>
+            <form class="form-contato" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Seu email">
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Sua mensagem"></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+            <p class="copyright">© 2024 Rafael de Oliveira Silva. Todos os direitos reservados.</p>
+        </footer>
+        
+        <script src="js/script.js"></script>
+</body>
+
+</html>
